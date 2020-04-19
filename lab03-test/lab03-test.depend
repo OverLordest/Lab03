@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1587325563 source:c:\users\ezik5\documents\Проги\lab01\lab03\historam.cpp
+1587326282 source:c:\users\ezik5\documents\Проги\lab01\lab03\historam.cpp
 	"histogram.h"
+	<iostream>
 
 1587325440 c:\users\ezik5\documents\Проги\lab01\lab03\histogram.h
 	<vector>

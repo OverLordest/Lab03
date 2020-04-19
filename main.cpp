@@ -27,7 +27,7 @@ vector <size_t> make_histogram(vector <double> numbers,size_t bin_count,double m
     }
     return(bins);
 }
-void show_histogram_text(vector<size_t>bins)
+void show_histogram_text(vector<size_t>bins,size_t number_count)
 {
     const size_t SCREEN_WIDTH = 80;
     const size_t MAX_ASTERISK = SCREEN_WIDTH - 4 - 1;
@@ -65,6 +65,12 @@ void show_histogram_text(vector<size_t>bins)
         {
             cout << '*';
         }
+        cout<<' ';
+        for (size_t i=height;i<max_count+1;i++)
+            {
+            cout<<" ";
+            }
+        cout<<(double)bin/number_count*100<<"%";
         cout << '\n';
     }
 }
@@ -90,7 +96,7 @@ int main()
     find_minmax(numbers,min,max);
 
     const auto bins = make_histogram(numbers, bin_count,min,max);
-    show_histogram_svg(bins);
+    show_histogram_text(bins,number_count);
 
 
 

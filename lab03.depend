@@ -4,9 +4,10 @@
 	<vector>
 	"histogram.h"
 
-1587323569 c:\users\ezik5\documents\Проги\lab01\lab03\histogram.h
+1587325440 c:\users\ezik5\documents\Проги\lab01\lab03\histogram.h
 	<vector>
 
-1587323839 source:c:\users\ezik5\documents\Проги\lab01\lab03\historam.cpp
+1587326282 source:c:\users\ezik5\documents\Проги\lab01\lab03\historam.cpp
 	"histogram.h"
+	<iostream>
 
