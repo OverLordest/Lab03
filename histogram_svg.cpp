@@ -1,4 +1,4 @@
-#include "histogram.h"
+#include "histogram_svg.h"
 #include <iostream>
 using namespace std;
 void svg_begin(double width, double height)
@@ -22,7 +22,7 @@ void svg_text(double left, double baseline, string text,size_t bin)
 {
     cout << "<text x='" << left << "' y='"<<baseline<<"'>"<<bin<<"</text>";
 }
-void show_histogram_svg(const vector<size_t> bins)
+void show_histogram_svg(const vector<size_t> bins,size_t number_count)
 {
     const auto IMAGE_WIDTH = 400;
     const auto IMAGE_HEIGHT = 300;
@@ -59,6 +59,7 @@ void show_histogram_svg(const vector<size_t> bins)
         svg_text(TEXT_LEFT, top + TEXT_BASELINE, to_string(bin),bin);
         svg_rect(TEXT_WIDTH, top, bin_width, BIN_HEIGHT,stroke,fill);
         top += BIN_HEIGHT;
+        cout << "<text x='" << SCREEN_WIDTH+100 << "' y='"<<top<<"'>"<<(double)bin/number_count*100<<"%</text>";
     }
     svg_end();
 }
