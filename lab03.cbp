@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="histogram.h" />
+		<Unit filename="histogram_svg.cpp" />
+		<Unit filename="histogram_svg.h" />
 		<Unit filename="historam.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
