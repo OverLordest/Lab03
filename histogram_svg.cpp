@@ -57,6 +57,7 @@ void show_histogram_svg(const vector<size_t> bins,size_t number_count)
     double scaling_factor = 1;
     for (size_t bin : bins)
     {
+        svg_text(TEXT_LEFT, top + TEXT_BASELINE, to_string(bin),bin);
         if (scaling_needed)
         {
            scaling_factor = (double)MAX_ASTERISK / max_count;
@@ -64,7 +65,6 @@ void show_histogram_svg(const vector<size_t> bins,size_t number_count)
         }
 
         const double bin_width = BLOCK_WIDTH * bin;
-        svg_text(TEXT_LEFT, top + TEXT_BASELINE, to_string(bin),bin);
         svg_rect(TEXT_WIDTH, top, bin_width, BIN_HEIGHT,stroke,fill);
         svg_procent(TEXT_WIDTH+TEXT_LEFT+(size_t)(max_count*BLOCK_WIDTH*scaling_factor), top + TEXT_BASELINE,bin,number_count);
         top += BIN_HEIGHT;
