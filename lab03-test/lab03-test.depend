@@ -3,10 +3,20 @@
 	"histogram.h"
 	<iostream>
 
-1587387755 c:\users\ezik5\documents\Проги\lab01\lab03\histogram.h
+1587974638 c:\users\ezik5\documents\Проги\lab01\lab03\histogram.h
 	<vector>
 
-1587385012 source:c:\users\ezik5\documents\Проги\lab01\lab03\test.cpp
+1587974427 source:c:\users\ezik5\documents\Проги\lab01\lab03\test.cpp
 	"histogram.h"
+	"histogram_svg.h"
 	<cassert>
+
+1587974267 c:\users\ezik5\documents\Проги\lab01\lab03\histogram_svg.h
+	<vector>
+	<iostream>
+	<math.h>
+
+1587975202 source:c:\users\ezik5\documents\Проги\lab01\lab03\procent.cpp
+	"histogram_svg.h"
+	<math.h>
 

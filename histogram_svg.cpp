@@ -1,6 +1,6 @@
 #include "histogram_svg.h"
 #include <iostream>
-#include <math.h>
+
 using namespace std;
 void svg_begin(double width, double height)
 {
@@ -23,15 +23,10 @@ void svg_text(double left, double baseline, string text,double bin)
 {
     cout << "<text x='" << left << "' y='"<<baseline<<"'>"<<bin<<text<<"</text>";
 }
-/*void svg_procent(double left, double top,size_t bin,size_t number_count)
+/*double proc(size_t bin,size_t number_count)
 {
     const size_t rounding=10;
-    cout << "<text x='" << left << "' y='"<<top<<"'>"<<round((double)bin/number_count*100*rounding)/rounding<<"%</text>";
-}
-double proc(size_t bin,size_t number_count)
-{
-    const size_t rounding=10;
-return(round((double)bin/number_count*100*rounding)/rounding);
+    return(round((double)bin/number_count*100*rounding)/rounding);
 }*/
 void show_histogram_svg(const vector<size_t> bins,size_t number_count)
 {
@@ -44,10 +39,7 @@ void show_histogram_svg(const vector<size_t> bins,size_t number_count)
     const auto BLOCK_WIDTH = 5;
     const size_t SCREEN_WIDTH = 80;
     const size_t MAX_ASTERISK = SCREEN_WIDTH - 4 - 1;
-    const size_t rounding=10;
     svg_begin(IMAGE_WIDTH, IMAGE_HEIGHT);
-    // svg_text(TEXT_LEFT, TEXT_BASELINE, to_string(bins[0]));
-    //svg_rect(TEXT_WIDTH, 0, bins[0] * BLOCK_WIDTH, BIN_HEIGHT);
     double top = 0;
     string stroke="black";
     string fill="red";
@@ -63,16 +55,16 @@ void show_histogram_svg(const vector<size_t> bins,size_t number_count)
     double scaling_factor = 1;
     for (size_t bin : bins)
     {
-        svg_text(TEXT_LEFT, top + TEXT_BASELINE, "" ,(double)bin);
+        svg_text(TEXT_LEFT, top + TEXT_BASELINE, "",(double)bin);
         if (scaling_needed)
         {
-           scaling_factor = (double)MAX_ASTERISK / max_count;
+            scaling_factor = (double)MAX_ASTERISK / max_count;
             bin = (size_t)(bin * scaling_factor);
         }
 
         const double bin_width = BLOCK_WIDTH * bin;
         svg_rect(TEXT_WIDTH, top, bin_width, BIN_HEIGHT,stroke,fill);
-        svg_text(TEXT_WIDTH+TEXT_LEFT+(size_t)(max_count*BLOCK_WIDTH*scaling_factor), top + TEXT_BASELINE,"%",round((double)bin/number_count*100*rounding)/rounding);
+        svg_text(TEXT_WIDTH+TEXT_LEFT+(size_t)(max_count*BLOCK_WIDTH*scaling_factor), top + TEXT_BASELINE,"%",proc(bin,number_count));
         top += BIN_HEIGHT;
 
     }
