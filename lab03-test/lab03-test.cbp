@@ -33,6 +33,7 @@
 		</Compiler>
 		<Unit filename="../histogram.h" />
 		<Unit filename="../historam.cpp" />
+		<Unit filename="../procent.cpp" />
 		<Unit filename="../test.cpp" />
 		<Extensions>
 			<code_completion />
