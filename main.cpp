@@ -100,19 +100,21 @@ void show_histogram_text(vector<size_t>bins)
 
 int main(int argc, char* argv[])
 {
-    if (argc>1)
+     if (argc > 1)
     {
-        //cout<<"argv[0]="<<argv[0]<<" argc="<<argc;
-        CURL *curl = curl_easy_init();
-        if(curl)
-        {
+       CURL *curl = curl_easy_init();
+        if(curl) {
             CURLcode res;
             curl_easy_setopt(curl, CURLOPT_URL, argv[1]);
             res = curl_easy_perform(curl);
+            if (res)
+            {
+                cerr << curl_easy_strerror(res) << endl;
+                exit(1);
+            }
             curl_easy_cleanup(curl);
-            return(0);
         }
-
+        return 0;
     }
 
         curl_global_init(CURL_GLOBAL_ALL);
