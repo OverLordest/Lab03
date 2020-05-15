@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
 169405632 <<<<<<< HEAD
 
-1589530292 source:c:\users\ezik5\documents\Проги\lab01\lab03\main.cpp
+1589532754 source:c:\users\ezik5\documents\Проги\lab01\lab03\main.cpp
 	"histogram.h"
 	"histogram_svg.h"
 	<iostream>
 	<vector>
+	<curl/curl.h>
 
 1587974267 141477d2f8a5672c1b3aa6e4dd90cac061e0f
 	"histogram.h"
@@ -34,4 +35,43 @@
 	<vector>
 	<iostream>
 	<math.h>
+
+1587991348 c:\users\ezik5\documents\Проги\lab01\lab03\curl\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<osreldate.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<support/SupportDefs.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"typecheck-gcc.h"
+
+1588129392 c:\users\ezik5\documents\Проги\lab01\lab03\curl\include\curl\curlver.h
+
+1587548874 c:\users\ezik5\documents\Проги\lab01\lab03\curl\include\curl\system.h
+	<winsock2.h>
+	<windows.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1587548874 c:\users\ezik5\documents\Проги\lab01\lab03\curl\include\curl\easy.h
+
+1587548874 c:\users\ezik5\documents\Проги\lab01\lab03\curl\include\curl\multi.h
+	"curl.h"
+
+1587548874 c:\users\ezik5\documents\Проги\lab01\lab03\curl\include\curl\urlapi.h
+	"curl.h"
+
+1587548874 c:\users\ezik5\documents\Проги\lab01\lab03\curl\include\curl\typecheck-gcc.h
 
