@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<double> input_numbers(size_t count)
+vector<double> input_numbers(istream& in ,size_t count)
 {
     vector<double> result(count);
     for (size_t i = 0; i < count; i++)
@@ -79,31 +79,35 @@ void show_histogram_text(vector<size_t>bins,size_t number_count)
 
 int main()
 {
-    // Ввод данных
+    // Г‚ГўГ®Г¤ Г¤Г Г­Г­Г»Гµ
     size_t number_count;
     cerr << "Enter number count: ";
     cin >> number_count;
 
     cerr << "Enter numbers: ";
-    const auto numbers=input_numbers(number_count);
+    const auto numbers=input_numbers(cin,number_count);
 
     size_t bin_count;
     cerr << "Enter column count: ";
     cin >> bin_count;
 
-    // Обработка данных
+    // ГЋГЎГ°Г ГЎГ®ГІГЄГ  Г¤Г Г­Г­Г»Гµ
     double min;
     double max;
     find_minmax(numbers,min,max);
 
     const auto bins = make_histogram(numbers, bin_count,min,max);
-    show_histogram_svg(bins,number_count);
+    show_histogram_svg(bins);
 
 
 
 
-    // Вывод данных
+    // Г‚Г»ГўГ®Г¤ Г¤Г Г­Г­Г»Гµ
 
 
     return 0;
 }
+
+    // Р’С‹РІРѕРґ РґР°РЅРЅС‹С…
+
+

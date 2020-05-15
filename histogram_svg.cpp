@@ -28,7 +28,7 @@ void svg_text(double left, double baseline, string text,double bin)
     const size_t rounding=10;
     return(round((double)bin/number_count*100*rounding)/rounding);
 }*/
-void show_histogram_svg(const vector<size_t> bins,size_t number_count)
+void show_histogram_svg(const vector<size_t> bins)
 {
     const auto IMAGE_WIDTH = 600;
     const auto IMAGE_HEIGHT = 300;
@@ -64,7 +64,7 @@ void show_histogram_svg(const vector<size_t> bins,size_t number_count)
 
         const double bin_width = BLOCK_WIDTH * bin;
         svg_rect(TEXT_WIDTH, top, bin_width, BIN_HEIGHT,stroke,fill);
-        svg_text(TEXT_WIDTH+TEXT_LEFT+(size_t)(max_count*BLOCK_WIDTH*scaling_factor), top + TEXT_BASELINE,"%",proc(bin,number_count));
+       // svg_text(TEXT_WIDTH+TEXT_LEFT+(size_t)(max_count*BLOCK_WIDTH*scaling_factor), top + TEXT_BASELINE,"%",proc(bin,number_count));
         top += BIN_HEIGHT;
 
     }
