@@ -23,11 +23,11 @@ void svg_text(double left, double baseline, string text,double bin)
 {
     cout << "<text x='" << left << "' y='"<<baseline<<"'>"<<bin<<text<<"</text>";
 }
-/*double proc(size_t bin,size_t number_count)
+double proc(size_t bin,size_t number_count)
 {
     const size_t rounding=10;
     return(round((double)bin/number_count*100*rounding)/rounding);
-}*/
+}
 void show_histogram_svg(const vector<size_t> bins,size_t number_count)
 {
     const auto IMAGE_WIDTH = 600;
