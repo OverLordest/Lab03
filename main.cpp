@@ -2,7 +2,7 @@
 #include "histogram_svg.h"
 #include <iostream>
 #include <vector>
-
+#include <cstdio>
 using namespace std;
 
 vector<double> input_numbers(size_t count)
@@ -79,6 +79,11 @@ void show_histogram_text(vector<size_t>bins,size_t number_count)
 
 int main()
 {
+    const char* name = "Commander Shepard";
+    int year = 2154;
+    printf("%s was born in %d.\n", name, year);
+    printf("n = %08x\n", 0x1234567);
+    return 0;
     // ¬вод данных
     size_t number_count;
     cerr << "Enter number count: ";
