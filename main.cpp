@@ -79,8 +79,7 @@ void show_histogram_text(vector<size_t>bins,size_t number_count)
 
 int main()
 {
-   // printf("Version is  %x\n", GetVersion());
-    //printf("Version is  %u\n", GetVersion());
+
     DWORD mask = 0x0000ffff;
     DWORD mask_major = 0b00000000'00000000'00000000'11111111;
     DWORD info = GetVersion();
@@ -88,16 +87,16 @@ int main()
     DWORD version = info & mask;
     DWORD version_major = version & mask_major;
     DWORD version_minor = version >> 8;
-    printf("Windows (decimal) version is %u.\n", version);
-    printf("Windows (16x) version is %x.\n", version);
-    printf("Your platform is %u.\n", platform);
-    printf("Windows major version is %u.\n", version_major);
-    printf("Windows minor version is %u.\n", version_minor);
+    printf("Windows v%u.%u (build %u)",version_major,version_minor,platform );
+    //printf(" Build %u", platform);
+    //printf("Your platform is %u.", platform);
+    //printf("Windows major version is %u.", version_major);
+    //printf("Windows minor version is %u.", version_minor);
 
-    if ((info & 0x40000000) == 0) {
+  /*  if ((info & 0x40000000) == 0) {
         DWORD build = platform;
-        printf("Windows build is %u.\n", build);
-    }
+        printf(" build %u", build);
+    }*/
 
    /* // ¬вод данных
     size_t number_count;
