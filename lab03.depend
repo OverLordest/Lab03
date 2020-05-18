@@ -12,7 +12,7 @@
 	"histogram.h"
 	<iostream>
 
-1589806237 source:c:\users\ezik5\documents\Проги\lab01\lab03\histogram_svg.cpp
+1589807082 source:c:\users\ezik5\documents\Проги\lab01\lab03\histogram_svg.cpp
 	"histogram_svg.h"
 	"System_info.h"
 	<iostream>
@@ -22,10 +22,7 @@
 	<iostream>
 	<math.h>
 
-1589806768 c:\users\ezik5\documents\Проги\lab01\lab03\system_info.h
-	<iostream>
-	<string>
-	<sstream>
+1589808017 c:\users\ezik5\documents\Проги\lab01\lab03\system_info.h
 
 1589806756 source:c:\users\ezik5\documents\Проги\lab01\lab03\system_info.cpp
 	<windows.h>
