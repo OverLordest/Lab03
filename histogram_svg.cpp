@@ -1,4 +1,5 @@
 #include "histogram_svg.h"
+#include "System_info.h"
 #include <iostream>
 
 using namespace std;
@@ -64,9 +65,9 @@ void show_histogram_svg(const vector<size_t> bins,size_t number_count)
 
         const double bin_width = BLOCK_WIDTH * bin;
         svg_rect(TEXT_WIDTH, top, bin_width, BIN_HEIGHT,stroke,fill);
-        svg_text(TEXT_WIDTH+TEXT_LEFT+(size_t)(max_count*BLOCK_WIDTH*scaling_factor), top + TEXT_BASELINE,"%",proc(bin,number_count));
+        //svg_text(TEXT_WIDTH+TEXT_LEFT+(size_t)(max_count*BLOCK_WIDTH*scaling_factor), top + TEXT_BASELINE);
         top += BIN_HEIGHT;
-
     }
+    cout << "<text x='" << TEXT_LEFT << "' y='"<<top+BIN_HEIGHT<<"'>"<<make_info_text()<<"</text>";
     svg_end();
 }
