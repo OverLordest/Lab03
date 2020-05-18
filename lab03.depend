@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
 169405632 <<<<<<< HEAD
 
-1589566060 source:c:\users\ezik5\documents\Проги\lab01\lab03\main.cpp
+1589808329 source:c:\users\ezik5\documents\Проги\lab01\lab03\main.cpp
 	<sstream>
 	<string>
 	<curl/curl.h>
@@ -11,6 +11,8 @@
 	"histogram_svg.h"
 
 1587974267 141477d2f8a5672c1b3aa6e4dd90cac061e0f
+
+1589806756 04p2
 	"histogram.h"
 	"histogram_svg.h"
 	<iostream>
@@ -19,22 +21,31 @@
 	<vector>
 	<iostream>
 	<math.h>
+	<iostream>
+	"histogram.h"
+	"histogram_svg.h"
+	"System_info.h"
+	<iostream>
+	<vector>
+	<iostream>
+	<math.h>
 
-1587385185 D
+1589799197 D
 
-1589565886 c:\users\ezik5\documents\Проги\lab01\lab03\histogram.h
+1589808204 c:\users\ezik5\documents\Проги\lab01\lab03\histogram.h
 	<vector>
 
-1589565946 source:c:\users\ezik5\documents\Проги\lab01\lab03\historam.cpp
+1589808204 source:c:\users\ezik5\documents\Проги\lab01\lab03\historam.cpp
 	<vector>
 	<iostream>
 	"histogram.h"
 
-1589535232 source:c:\users\ezik5\documents\Проги\lab01\lab03\histogram_svg.cpp
+1589808501 source:c:\users\ezik5\documents\Проги\lab01\lab03\histogram_svg.cpp
 	"histogram_svg.h"
+	"System_info.h"
 	<iostream>
 
-1589527685 c:\users\ezik5\documents\Проги\lab01\lab03\histogram_svg.h
+1589808204 c:\users\ezik5\documents\Проги\lab01\lab03\histogram_svg.h
 	<vector>
 	<iostream>
 	<math.h>
@@ -77,4 +88,12 @@
 	"curl.h"
 
 1587548874 c:\users\ezik5\documents\Проги\lab01\lab03\curl\include\curl\typecheck-gcc.h
+
+1589808329 c:\users\ezik5\documents\Проги\lab01\lab03\system_info.h
+
+1589808329 source:c:\users\ezik5\documents\Проги\lab01\lab03\system_info.cpp
+	<windows.h>
+	<iostream>
+	<string>
+	<sstream>
 

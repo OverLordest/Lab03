@@ -31,12 +31,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="curl/include" />
 		</Compiler>
-		<Linker>
-			<Add library="libcurl.dll.a" />
-			<Add directory="curl/lib" />
-		</Linker>
+		<Unit filename="System_info.cpp" />
+		<Unit filename="System_info.h" />
 		<Unit filename="histogram.h" />
 		<Unit filename="histogram_svg.cpp" />
 		<Unit filename="histogram_svg.h" />
