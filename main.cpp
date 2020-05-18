@@ -79,15 +79,18 @@ void show_histogram_text(vector<size_t>bins,size_t number_count)
 
 int main()
 {
-
-    DWORD mask = 0x0000ffff;
+    char system_name[MAX_COMPUTERNAME_LENGTH + 1];
+    DWORD Size = sizeof(system_name);
+    GetComputerNameA(system_name, &Size);
+    printf("System name: %s", system_name);
+   /* DWORD mask = 0x0000ffff;
     DWORD mask_major = 0b00000000'00000000'00000000'11111111;
     DWORD info = GetVersion();
     DWORD platform = info >> 16;
     DWORD version = info & mask;
     DWORD version_major = version & mask_major;
     DWORD version_minor = version >> 8;
-    printf("Windows v%u.%u (build %u)",version_major,version_minor,platform );
+    printf("Windows v%u.%u (build %u)",version_major,version_minor,platform );*/
     //printf(" Build %u", platform);
     //printf("Your platform is %u.", platform);
     //printf("Windows major version is %u.", version_major);

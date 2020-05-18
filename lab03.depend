@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1589803753 source:c:\users\ezik5\documents\Проги\lab01\lab03\main.cpp
+1589805480 source:c:\users\ezik5\documents\Проги\lab01\lab03\main.cpp
 	"histogram.h"
 	"histogram_svg.h"
 	<iostream>
